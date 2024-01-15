@@ -1,0 +1,41 @@
+:root{
+  --whith: #f5f5f6;
+  --black: #000000;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-size: 18px;
+  background-color: var(--black);
+}
+
+.App {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  justify-items: center;
+  align-items: center;
+}
+
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contendedor-botones {
+  display: grid;
+  grid-template-rows: repeat(2,1fr);
+  justify-items: center;
+  align-items: center;
+}
+.contendedor-botones-numeros{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  align-items: center;
+}

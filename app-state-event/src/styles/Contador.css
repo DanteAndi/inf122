@@ -1,0 +1,17 @@
+:root{
+    --green: #008f39;
+    --blue: #0000ff;
+    --lg : 160px;   
+}
+.contador{
+    min-width: 300px;
+    height: auto;
+    font-size: var(--lg);
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--green);
+    color: var(--blue);
+    align-items: center;
+    margin-bottom: 10px;
+}
