@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Nota from './components/Nota';
 function App() {
+  const onDelete=() =>{
+    console.log("Eliminar");
+  }
+  const onEdit=()=>{
+    console.log("Editar");
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nota nota="hola" onDelete="onDelete" onEdit="onEdit"/>
     </div>
   );
 }
