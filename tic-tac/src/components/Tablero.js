@@ -1,22 +1,31 @@
 import React from 'react';
 import '../style/Tablero.css';
-import Cuadro from './Cuadro';
-function Tablero() {
+import CuadroB from './CuadroB';
+
+function Tablero({ cuadros, onClick }) {
+    function renderizarCuadro(i) {
+        return (
+            <CuadroB
+                valor={cuadros[i]}
+                funcion={() => onClick(i)}
+            />
+        );
+    }
 
     return (
-        <div className="tablero">
-            <Cuadro valor={0} />
-            <Cuadro valor={1} />
-            <Cuadro valor={2} />
-            <Cuadro valor={3} />
-            <Cuadro valor={4} />
-            <Cuadro valor={5} />
-            <Cuadro valor={6} />
-            <Cuadro valor={7} />
-            <Cuadro valor={8} />
+        <div>
+            <div className="tablero">
+                {renderizarCuadro(0)}
+                {renderizarCuadro(1)}
+                {renderizarCuadro(2)}
+                {renderizarCuadro(3)}
+                {renderizarCuadro(4)}
+                {renderizarCuadro(5)}
+                {renderizarCuadro(6)}
+                {renderizarCuadro(7)}
+                {renderizarCuadro(8)}
+            </div>
         </div>
-
     );
 }
-
 export default Tablero;
