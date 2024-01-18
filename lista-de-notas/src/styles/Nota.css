@@ -1,0 +1,52 @@
+button {
+    width: 300px;
+    height: 80px;
+    font-family: Roboto, sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 24px;
+    background-color: #FF872C;
+
+}
+
+.contenedor-nota {
+    background-color: #DCDCE5;
+
+}
+
+.editar-nota {
+    display: flex;
+    flex-direction: column;
+    background-color: #DCDCE5;
+    color: #FF872C;
+
+}
+
+.editar-nota textarea {
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 24px;
+    text-align: center;
+
+}
+
+.nota {
+    width: 300px;
+    height: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: #DCDCE5;
+    text-align: center;
+}
+
+.boton {
+    width: 150px;
+}
+
+button:hover {
+    background-color: #DCDCE5;
+    color: #FF872C;
+}

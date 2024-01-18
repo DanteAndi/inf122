@@ -1,30 +1,33 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import '../styles/Nota.css';
+function Nota({ nota, onDelete, onEdit }) {
+    const [editando, setEditando] = useState(false);
+    const [nuevoTexto, setNuevoTexto] = useState(nota.texto);
 
-function Nota({nota}){
-    const[notas,setNotas]=useState([])
-    const [texto, setTexto] = useState("")
-    const addNota =()=>{
-        setNotas([... notas ,"otra nota"])
-        console.log("notas");
+    const handleGuardar = () => {
+        onEdit(nota.id, nuevoTexto);
+        setEditando(false);
     };
-    const onDelete =()=>{
-        console.log("Eliminar");
-    };
-    const onEdit=()=>{
-        console.log("Editar");
-    };
-    return(
+
+    return (
         <div>
-            <p>{nota}</p>
-            <button onClick={addNota}>Agregar-Nota</button>
-            <div>
-            <p></p>
-                <button onClick={onEdit}>Editar</button>
-                <button onClick={onDelete}>Eliminar</button>    
-                
-            </div>
+            {editando ? (
+                <div className='editar-nota'>
+                    <textarea
+                        value={nuevoTexto}
+                        onChange={(e) => setNuevoTexto(e.target.value)}
+                    />
+                    <button onClick={handleGuardar}>Guardar</button>
+                </div>
+            ) : (
+                <div className='contenedor-nota'>
+                    <p className='nota'>{nota.texto}</p>
+                    <button className='boton' onClick={() => onDelete(nota.id)}>Eliminar</button>
+                    <button className='boton' onClick={() => setEditando(true)}>Editar</button>
+                </div>
+            )}
         </div>
-    )
+    );
 }
-export default Nota
+
+export default Nota;
