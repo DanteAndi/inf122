@@ -6,11 +6,11 @@ import { useEffect, useState } from "react";
 function foto(){
     const[perrito,setPerrito]=useState("/vercel.svg");
     const[estado, setEstado]=useState("esperando")
-    const url="https://dog.ceo/api/breeds/image/random";
+    const url="https://pokeapi.co/api/v2/pokemon/raichu";
     useEffect(()=>{
         fetch(url).then(res=>res.json())
         .then(data=>{
-            setPerrito(data.message),setEstado(data.status)}); 
+            setPerrito(data.sprites.front_default)}); 
 
     },[]);
     return(
