@@ -1,0 +1,9 @@
+.contenedor{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor img{
+    border-radius: 150%;
+    object-fit: cover;
+}
